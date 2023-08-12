@@ -1,0 +1,17 @@
+.main-menu .active {
+  color: blue;
+}
+
+.main-menu ul {
+  display: flex;
+  justify-content: center;
+  font-size: larger;
+  font-weight: bold;
+  gap: 5rem;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.push-right {
+  margin-left: auto;
+}
