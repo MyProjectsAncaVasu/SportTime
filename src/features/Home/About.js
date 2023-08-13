@@ -15,7 +15,7 @@ export function About() {
           quam necessitatibus quaerat nostrum dolorem fugit blanditiis delectus
           atque assumenda maxime!
         </p> */}
-        <div className="grid grid-cols-2 bg-pink-300  mt-0">
+        <div className="grid grid-cols-2   mt-0">
           <img
             style={{
               height: '100%',
