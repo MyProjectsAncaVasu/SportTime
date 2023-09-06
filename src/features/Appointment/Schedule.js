@@ -23,7 +23,7 @@ export function Schedule() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    alert('You have submitted the form.');
+    alert('You have added successfully.');
     console.log(formValues);
 
     const data = await fetch('http://localhost:3005/schedules', {
@@ -200,13 +200,13 @@ export function Schedule() {
               <Link
                 to="/appointment/summary"
                 state={formValues}
-                className="rounded  bg-teal-100 text-black  text-xl border-8 mb-4 font-semibold ml-20"
+                className="rounded  bg-teal-100 text-black  text-xl border-8 mb-4 font-semibold float-right"
               >
                 Register
               </Link>
               <button
                 type="submit"
-                className="rounded  bg-teal-100 text-black  text-xl border-8 mb-4 font-semibold ml-80"
+                className="rounded  bg-teal-100 text-black  text-xl border-8 mb-4 font-semibold ml-40"
               >
                 Add activity
               </button>

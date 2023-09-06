@@ -5,6 +5,7 @@ export { Schedule } from './Appointment/Schedule';
 export { Summary } from './Appointment/Summary';
 
 export { Activities } from './Activities/Activities';
+export { ActivitiesDelete } from './Activities/ActivitiesDelete';
 export { NotFound } from './NotFound/NotFound';
 
 export { Auth } from './Auth/Auth';

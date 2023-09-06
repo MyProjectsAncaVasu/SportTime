@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBackward } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
@@ -9,7 +10,7 @@ export function Activities() {
   // // tableValues - trebuie sa fie array */
 
   useEffect(() => {
-    fetch('http://localhost:3005/schedules?limit=100')
+    fetch('http://localhost:3005/api/schedules/')
       .then((res) => res.json())
       .then((data) => {
         setTableValues(data);
@@ -20,16 +21,20 @@ export function Activities() {
       });
   }, []);
 
-  const handleDelete = (index) => {
-    const cells = [...tableValues];
-    cells.splice(index, 1);
-    setTableValues(cells);
+  if (!tableValues) {
+    return <strong>Loading...</strong>;
+  }
 
-    // const newItems = tableValues.filter(
-    //   (tableValue) => tableValue.id !== index
-    // );
-    // setTableValues(newItems);
-  };
+  // const handleDelete = (index) => {
+  //   const cells = [...tableValues];
+  //   cells.splice(index, 1);
+  //   setTableValues(cells);
+
+  // const newItems = tableValues.filter(
+  //   (tableValue) => tableValue.id !== index
+  // );
+  // setTableValues(newItems);
+  // };
 
   const addItem = (row) => {
     // const newItem = {
@@ -56,14 +61,14 @@ export function Activities() {
           {' '}
           <button
             className="btn btn-outline-danger"
-            onClick={() => handleDelete(id)}
+            // onClick={() => handleDelete(id)}
           >
-            DELETE
+            {/* DELETE */}
+            <NavLink to="activitiesDelete">DELETE</NavLink>
           </button>
         </td>
 
         <td>
-          {' '}
           <button
             className="btn btn-outline-danger"
             onClick={() => addItem(id)}
@@ -87,6 +92,9 @@ export function Activities() {
           <FontAwesomeIcon icon={faBackward} />
           <NavLink to="/appointment/Schedule">Go Back</NavLink>
         </button>
+        <h3 className="text-xl font-bold mt-4 ml-80 text-blue-500">
+          Hello, DailyActivities
+        </h3>
 
         <table className=" ml-40 mt-6  mr-40 text-center border-red-500 border-4 grid ">
           <thead>

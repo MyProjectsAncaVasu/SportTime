@@ -9,6 +9,7 @@ import {
   Schedule,
   Summary,
   Activities,
+  ActivitiesDelete,
 } from './features';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/register" element={<Auth />} />
         <Route path="/appointment/summary" element={<Summary />} />
         <Route path="/activities" element={<Activities />} />
+        <Route path="/activities/:activityId" element={<ActivitiesDelete />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>
