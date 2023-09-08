@@ -25,25 +25,6 @@ export function Activities() {
     return <strong>Loading...</strong>;
   }
 
-  // const handleDelete = (index) => {
-  //   const cells = [...tableValues];
-  //   cells.splice(index, 1);
-  //   setTableValues(cells);
-
-  // const newItems = tableValues.filter(
-  //   (tableValue) => tableValue.id !== index
-  // );
-  // setTableValues(newItems);
-  // };
-
-  const addItem = (row) => {
-    // const newItem = {
-    //   id: tableValues.length + 1,
-    // };
-    tableValues.push(row);
-    setTableValues([...tableValues]);
-  };
-
   // iterate through the tableValues array and render a unique tableValue component for each tableValue object in the array
 
   const rows = tableValues.map((row, id) => {
@@ -59,21 +40,18 @@ export function Activities() {
         <td className="  bg-teal-100 ">{row.morningEnd}</td>
         <td>
           {' '}
-          <button
-            className="btn btn-outline-danger"
-            // onClick={() => handleDelete(id)}
-          >
-            {/* DELETE */}
-            <NavLink to="activitiesDelete">DELETE</NavLink>
+          <button className="btn btn-outline-danger">
+            <NavLink to="/activities/activitiesDelete">DELETE</NavLink>
           </button>
         </td>
 
         <td>
           <button
             className="btn btn-outline-danger"
-            onClick={() => addItem(id)}
+            // onClick={() => addItem(id)}
           >
-            Add Item
+            <NavLink to="/activities/activitiesModifica">Modifica</NavLink>
+            {/* Add Item */}
           </button>
         </td>
         <td className="  bg-pink-100  ">{id + 1}</td>
@@ -105,7 +83,7 @@ export function Activities() {
               <th className=" text-center">Start Time</th>
               <th className=" text-center">End Time</th>
               <th className=" text-center">Delete</th>
-              <th className=" text-center">Add Item</th>
+              <th className=" text-center">Edit Item</th>
             </tr>
           </thead>
           <tbody>{rows}</tbody>

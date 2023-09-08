@@ -10,7 +10,7 @@ export function ActivitiesDelete() {
   const [activities, setActivities] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:3005/api/schedules/57')
+    fetch('http://localhost:3005/api/schedules/38')
       .then((res) => res.json())
       .then((data) => {
         setActivities(data);
@@ -30,7 +30,7 @@ export function ActivitiesDelete() {
       return;
     }
 
-    await fetch('http://localhost:3005/api/schedules/57', {
+    await fetch('http://localhost:3005/api/schedules/38', {
       method: 'DELETE',
       headers: {},
       body: JSON.stringify(activities),
@@ -101,6 +101,7 @@ export function ActivitiesDelete() {
             </span>
           </li>
         </ul>
+
         <div>
           <button
             className="rounded  bg-teal-100 text-black font-semibold px-2 py-1 text-center float-right mt-10 mr-20 cursor-pointer"

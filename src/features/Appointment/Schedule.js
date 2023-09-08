@@ -204,6 +204,7 @@ export function Schedule() {
               >
                 Register
               </Link>
+
               <button
                 type="submit"
                 className="rounded  bg-teal-100 text-black  text-xl border-8 mb-4 font-semibold ml-40"

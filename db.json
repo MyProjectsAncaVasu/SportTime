@@ -170,7 +170,7 @@
     },
     {
       "day": "Monday",
-      "morningActivity": "Jogging",
+      "morningActivity": "anca",
       "morningStart": "06:31",
       "morningEnd": "08:00",
       "eveningActivity": "Tennis",
@@ -202,26 +202,6 @@
       "day": "Tuesday",
       "morningActivity": "Tennis",
       "id": 47
-    },
-    {
-      "day": "Friday",
-      "morningActivity": "Aerobic",
-      "id": 48
-    },
-    {
-      "day": "Sunday",
-      "morningActivity": "Jogging",
-      "morningStart": "07:28",
-      "morningEnd": "09:09",
-      "eveningActivity": "Cycling",
-      "eveningStart": "19:29",
-      "eveningEnd": "21:29",
-      "id": 49
-    },
-    {
-      "day": "Friday",
-      "morningActivity": "Jogging",
-      "id": 51
     },
     {
       "day": "Monday",
@@ -286,6 +266,46 @@
       "eveningStart": "20:00",
       "eveningEnd": "21:08",
       "id": 60
+    },
+    {
+      "day": "Wednesday",
+      "morningActivity": "Aerobic",
+      "morningStart": "08:00",
+      "morningEnd": "09:00",
+      "eveningActivity": "Cycling",
+      "eveningStart": "19:10",
+      "eveningEnd": "20:10",
+      "id": 61
+    },
+    {
+      "day": "Thursday",
+      "morningActivity": "Jogging",
+      "morningStart": "08:32",
+      "morningEnd": "09:32",
+      "eveningActivity": "Tennis",
+      "eveningStart": "20:32",
+      "eveningEnd": "21:32",
+      "id": 62
+    },
+    {
+      "day": "Friday",
+      "morningActivity": "Jogging",
+      "morningStart": "09:34",
+      "morningEnd": "10:35",
+      "eveningActivity": "Swimming",
+      "eveningStart": "17:35",
+      "eveningEnd": "19:35",
+      "id": 63
+    },
+    {
+      "day": "Tuesday",
+      "morningActivity": "Jogging",
+      "morningStart": "07:48",
+      "morningEnd": "08:48",
+      "eveningActivity": "Swimming",
+      "eveningStart": "19:48",
+      "eveningEnd": "20:48",
+      "id": 64
     }
   ],
   "movies": [
