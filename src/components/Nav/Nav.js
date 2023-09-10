@@ -5,7 +5,7 @@ export function Nav() {
   return (
     <nav className={styles['main-menu']}>
       <ul>
-        <li className="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110">
+        <li className="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 ">
           <NavLink
             className={({ isActive }) => (isActive ? styles.active : '')}
             to="/home"
@@ -14,7 +14,7 @@ export function Nav() {
           </NavLink>
         </li>
 
-        <li>
+        <li className="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110">
           <NavLink
             className={({ isActive }) => (isActive ? styles.active : '')}
             to="/appointment/schedule"
@@ -22,7 +22,7 @@ export function Nav() {
             Appointment
           </NavLink>
         </li>
-        <li>
+        <li className="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110">
           <NavLink
             className={({ isActive }) => (isActive ? styles.active : '')}
             to="/activities"

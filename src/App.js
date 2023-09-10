@@ -32,6 +32,7 @@ function App() {
           element={<ActivitiesModifica />}
         />
         <Route path="/activities/:activityId" element={<ActivitiesDelete />} />
+
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

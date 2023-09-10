@@ -1,22 +1,22 @@
 import { useEffect, useState } from 'react';
-// import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleMinus, faBackward } from '@fortawesome/free-solid-svg-icons';
 
 export function ActivitiesDelete() {
-  // const { activityId } = useParams();
+  const { activityId } = useParams();
   const [activities, setActivities] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:3005/api/schedules/38')
+    fetch('http://localhost:3005/api/schedules/' + activityId)
       .then((res) => res.json())
       .then((data) => {
         setActivities(data);
         console.log(data);
       });
-  }, []);
+  }, [activityId]);
 
   if (!activities) {
     return <strong>Loading...</strong>;
@@ -30,7 +30,7 @@ export function ActivitiesDelete() {
       return;
     }
 
-    await fetch('http://localhost:3005/api/schedules/38', {
+    await fetch('http://localhost:3005/api/schedules/' + activities.id, {
       method: 'DELETE',
       headers: {},
       body: JSON.stringify(activities),
@@ -49,18 +49,9 @@ export function ActivitiesDelete() {
         Day:
         {activities.day}
       </h1>
-      <div
-        style={{
-          boxShadow: '5px 10px 18px #8D8DAA',
-          backgroundColor: '#EDEEF7',
-          marginTop: 4,
-          marginLeft: 140,
-          width: 1000,
-          height: 200,
-        }}
-      >
+      <div className="mt-4 ml-36 mr-72 h-52 rounded-xl bg-[rgb(237,238,247)]  shadow-[5px_10px_18px]">
         <ul className="text-l ml-20 mt-10 font-bold mr-20">
-          <li className="grid grid-cols-5 mt-10 ">
+          <li className="grid grid-cols-5 mt-12 ">
             morningActivity:
             <span className=" text-center text-blue-600">
               {activities.morningActivity}

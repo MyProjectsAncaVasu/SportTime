@@ -306,6 +306,16 @@
       "eveningStart": "19:48",
       "eveningEnd": "20:48",
       "id": 64
+    },
+    {
+      "day": "Tuesday",
+      "morningActivity": "Tennis",
+      "morningStart": "08:30",
+      "morningEnd": "09:30",
+      "eveningActivity": "Cycling",
+      "eveningStart": "19:50",
+      "eveningEnd": "20:50",
+      "id": 65
     }
   ],
   "movies": [

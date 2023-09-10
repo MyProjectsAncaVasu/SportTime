@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-// import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -16,10 +16,10 @@ export function ActivitiesModifica() {
     eveningEnd: '',
   });
 
-  // const { activityId } = useParams();
+  const { activityId } = useParams();
 
   useEffect(() => {
-    fetch('http://localhost:3005/api/schedules/38', {
+    fetch('http://localhost:3005/api/schedules/' + activityId, {
       method: 'GET',
       headers: {
         'Content-type': 'application/json',
@@ -30,7 +30,7 @@ export function ActivitiesModifica() {
         setValues(data);
         console.log(data);
       });
-  }, []);
+  }, [activityId]);
 
   if (!values) {
     return <strong>Loading...</strong>;
@@ -43,7 +43,7 @@ export function ActivitiesModifica() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    await fetch('http://localhost:3005/api/schedules/38', {
+    await fetch('http://localhost:3005/api/schedules/' + values.id, {
       method: 'PATCH',
       headers: {
         'Content-type': 'application/json',
@@ -67,29 +67,20 @@ export function ActivitiesModifica() {
         Day:
         {values.day}
       </h1>
-      <div
-        style={{
-          boxShadow: '5px 10px 18px #8D8DAA',
-          backgroundColor: '#EDEEF7',
-          marginTop: 4,
-          marginLeft: 140,
-          width: 1000,
-          height: 200,
-        }}
-      >
+      <div className="mt-4 ml-36 mr-72 h-52 rounded-xl bg-[rgb(237,238,247)]  shadow-[5px_10px_18px]">
         <form onSubmit={handleSubmit}>
           <div className="text-l ml-20 mt-10 font-bold mr-20">
-            <p className="  mt-10 ">
+            <p className="  mt-10  grid grid-cols-4">
               <label>morningActivity:</label>
               <input
-                className="  text-center text-blue-600 rounded"
+                className="  text-center text-blue-600 rounded-md "
                 type="text"
                 name="morningActivity"
                 value={values.morningActivity}
                 onChange={handleInputChange}
               ></input>
             </p>
-            <p className="   mt-2 ">
+            <p className="   mt-2 grid grid-cols-4">
               <label htmlFor=""> morningStart:</label>
               <input
                 className="  text-center text-blue-600 rounded"
@@ -98,7 +89,7 @@ export function ActivitiesModifica() {
                 onChange={handleInputChange}
               ></input>
             </p>
-            <p className=" mt-2 ">
+            <p className=" mt-2 grid grid-cols-4">
               morningEnd:{' '}
               <input
                 className="  text-center text-blue-600 rounded"
@@ -109,7 +100,7 @@ export function ActivitiesModifica() {
               ></input>
             </p>
 
-            <p className=" mt-4 border-gray-500 border-y-2  border-b-0  ">
+            <p className=" mt-4 border-gray-500 border-y-2  border-b-0 grid grid-cols-4 ">
               eveningActivity:{' '}
               <input
                 className="  text-center text-blue-600 rounded"
@@ -120,7 +111,7 @@ export function ActivitiesModifica() {
               ></input>
             </p>
 
-            <p className=" mt-2 ">
+            <p className=" mt-2 grid grid-cols-4">
               eveningStart:{' '}
               <input
                 className="  text-center text-blue-600 rounded"
@@ -131,7 +122,7 @@ export function ActivitiesModifica() {
               ></input>
             </p>
 
-            <p className=" mt-2 ">
+            <p className=" mt-2 grid grid-cols-4">
               eveningEnd:
               <input
                 className="  text-center text-blue-600 rounded"

@@ -46,12 +46,8 @@ export function Activities() {
         </td>
 
         <td>
-          <button
-            className="btn btn-outline-danger"
-            // onClick={() => addItem(id)}
-          >
+          <button className="btn btn-outline-danger">
             <NavLink to="/activities/activitiesModifica">Modifica</NavLink>
-            {/* Add Item */}
           </button>
         </td>
         <td className="  bg-pink-100  ">{id + 1}</td>
