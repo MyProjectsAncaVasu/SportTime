@@ -27,10 +27,7 @@ function App() {
         <Route path="/appointment/summary" element={<Summary />} />
         <Route path="/activities" element={<Activities />} />
 
-        <Route
-          path="/activities/:activityId"
-          element={<ActivitiesModifica />}
-        />
+        <Route path="/activities/:valueId" element={<ActivitiesModifica />} />
         <Route path="/activities/:activityId" element={<ActivitiesDelete />} />
 
         <Route path="*" element={<NotFound />} />

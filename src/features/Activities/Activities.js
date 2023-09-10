@@ -41,13 +41,13 @@ export function Activities() {
         <td>
           {' '}
           <button className="btn btn-outline-danger">
-            <NavLink to="/activities/activitiesDelete">DELETE</NavLink>
+            <NavLink to={`/activities/${row.id}`}>DELETE</NavLink>
           </button>
         </td>
 
         <td>
           <button className="btn btn-outline-danger">
-            <NavLink to="/activities/activitiesModifica">Modifica</NavLink>
+            <NavLink to={`/activities/${row.id}`}>Modifica</NavLink>
           </button>
         </td>
         <td className="  bg-pink-100  ">{id + 1}</td>

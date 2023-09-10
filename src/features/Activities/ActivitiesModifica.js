@@ -16,10 +16,10 @@ export function ActivitiesModifica() {
     eveningEnd: '',
   });
 
-  const { activityId } = useParams();
+  const { valueId } = useParams();
 
   useEffect(() => {
-    fetch('http://localhost:3005/api/schedules/' + activityId, {
+    fetch('http://localhost:3005/api/schedules/' + valueId, {
       method: 'GET',
       headers: {
         'Content-type': 'application/json',
@@ -30,7 +30,7 @@ export function ActivitiesModifica() {
         setValues(data);
         console.log(data);
       });
-  }, [activityId]);
+  }, [valueId]);
 
   if (!values) {
     return <strong>Loading...</strong>;

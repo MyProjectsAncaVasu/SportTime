@@ -20,7 +20,7 @@
     {
       "id": 1,
       "day": "Monday",
-      "morningActivity": "Aerobic",
+      "morningActivity": "anca",
       "morningStart": "10:00",
       "morningEnd": "11:00",
       "eveningActivity": "Tennis",
@@ -39,7 +39,7 @@
     },
     {
       "day": "Tuesday",
-      "morningActivity": "Tennis",
+      "morningActivity": "anca",
       "morningStart": "09:00",
       "morningEnd": "10:10",
       "eveningActivity": "Aerobic",
@@ -77,13 +77,6 @@
       "morningStart": "08:10",
       "morningEnd": "10:17",
       "id": 9
-    },
-    {
-      "day": "Monday",
-      "eveningActivity": "Aerobic",
-      "eveningStart": "18:11",
-      "eveningEnd": "19:11",
-      "id": 10
     },
     {
       "day": "Monday",
@@ -180,7 +173,7 @@
     },
     {
       "day": "Monday",
-      "morningActivity": "Jogging",
+      "morningActivity": "rafa",
       "morningStart": "06:31",
       "morningEnd": "08:00",
       "eveningActivity": "Tennis",
